@@ -1,6 +1,6 @@
 
 <div style="text-align: center;">
-  <h1 style="font-size: 36px; margin-bottom: 20px;">Pokedex</h1>
+  <h1 style="font-size: 36px; margin-bottom: 20px;">Circular Custom Layout</h1>
   
   <div style="display: flex; justify-content: center; gap: 20px;">
     <img src="https://github.com/user-attachments/assets/c8f99f05-425d-467a-9450-c2a2004efc0a" style="width: 30%; max-width: 300px;">
