@@ -1,5 +1,6 @@
 package com.example.customlayout
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
@@ -20,7 +21,8 @@ class CircularLayout {
         backgroundColor: Color = Color.LightGray,
         itemColor: Color = Color.Red,
         itemSize: Dp = 50.dp,
-        content: @Composable () -> Unit
+        onItemClick: (Int) -> Unit = {},
+        content: @Composable (Int, Modifier) -> Unit
     ) {
         Box(
             modifier = modifier
@@ -34,7 +36,16 @@ class CircularLayout {
                 }
         ) {
             Layout(
-                content = content
+                content = {
+                    repeat(8) {index ->
+                        content(
+                            index,
+                            Modifier
+                                .size(itemSize)
+                                .clickable { onItemClick (index) }
+                        )
+                    }
+                }
             ) { measurables, constraints ->
                 // Measure children
                 val placeables = measurables.map { measurable ->
