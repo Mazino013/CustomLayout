@@ -4,14 +4,18 @@
   
   <div style="display: flex; justify-content: center; gap: 20px;">
     <img src="https://github.com/user-attachments/assets/c8f99f05-425d-467a-9450-c2a2004efc0a" style="width: 30%; max-width: 300px;">
+    <img src="https://github.com/user-attachments/assets/bb48172a-9916-463f-842e-ebccde771935" style="width: 30%; max-width: 300px;">
   </div>
 </div>
+
+
 
 ## Features
 - **Custom Layout Basics:**: We use the Layout composable to create a custom layout. This composable allows us to control how child elements are measured and positioned.
 - **Custom Layout**: The CircularLayout composable uses the Layout composable to create a custom layout. It measures each child and then positions them in a circle.
 - **DrawScope**: We use the drawBehind modifier on the outer Box to draw a background circle. This demonstrates how to use DrawScope for custom drawing.
 - **Circular Positioning**: Inside the Layout composable, we calculate the position for each child using trigonometry to place them evenly around the circle.
+- **Clickability**: when you click on any of the circular elements, it will take you to a detail screen showing the number you clicked on. The detail screen also has a "Go Back" button to return to the main screen.
 
 
 
